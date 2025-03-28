@@ -1,49 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Are Working</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: url('https://source.unsplash.com/1920x1080/?technology,work') no-repeat center center/cover;
-            font-family: 'Arial', sans-serif;
-            position: relative;
-            color: white;
-            text-align: center;
-        }
-
-        /* Capa de oscurecimiento para mejorar la legibilidad del texto */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        p {
-            font-size: 2.5rem;
-            font-weight: bold;
-            z-index: 2;
-            position: relative;
-        }
-    </style>
+  <!-- Basic Meta Tags and SEO -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Advanced Analytics & AI Consulting company offering state-of-the-art solutions for data-driven insights, artificial intelligence, and machine learning." />
+  <meta name="keywords" content="Analytics, AI, Consulting, Machine Learning, Data Science, Advanced Analytics" />
+  <meta name="author" content="GPT2AI" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Analytics & AI Consulting | GPT2AI</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <p>We are working</p>
+  <!-- Preloader (shown until page loads) -->
+  <div id="preloader" aria-label="Loading">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Back-to-Top Button -->
+  <a href="#hero" class="back-to-top" aria-label="Back to top">&#8679;</a>
+
+  <!-- Fixed Header with Logo and Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <div class="logo" role="img" aria-label="GPT2AI Logo">
+        <img src="logo-placeholder.png" alt="GPT2AI Logo">
+        <span>GPT2AI</span>
+      </div>
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#clients" class="nav-link">Clients</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#insights" class="nav-link">Insights</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Animated Headline and CTA -->
+  <section id="hero" class="hero" role="banner">
+    <div class="container hero-content">
+      <h1 class="hero-title">Empowering Your Business with AI &amp; Advanced Analytics</h1>
+      <p class="hero-subtitle">Transforming data into strategic insights for tomorrow’s success. [Catchy Tagline]</p>
+      <a href="#contact" class="cta-button">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about" role="region" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading">About Us</h2>
+      <p>GPT2AI is dedicated to delivering innovative AI solutions and comprehensive data analytics services. Our mission is to empower businesses by harnessing the power of data and artificial intelligence to drive growth and operational excellence.</p>
+      <div class="about-media">
+        <img src="about-placeholder.jpg" alt="About our company" class="responsive-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section with Detailed Cards -->
+  <section id="services" class="services" role="region" aria-labelledby="services-heading">
+    <div class="container">
+      <h2 id="services-heading">Our Services</h2>
+      <div class="service-cards">
+        <div class="card service-card" tabindex="0" aria-label="Service: AI Strategy">
+          <img src="service1-placeholder.png" alt="AI Strategy Icon">
+          <h3>AI Strategy</h3>
+          <p>Develop tailored AI strategies to drive growth and operational efficiency.</p>
+        </div>
+        <div class="card service-card" tabindex="0" aria-label="Service: Data Analytics">
+          <img src="service2-placeholder.png" alt="Data Analytics Icon">
+          <h3>Data Analytics</h3>
+          <p>Unlock deep insights from your data using cutting-edge analytics techniques.</p>
+        </div>
+        <div class="card service-card" tabindex="0" aria-label="Service: Machine Learning">
+          <img src="service3-placeholder.png" alt="Machine Learning Icon">
+          <h3>Machine Learning</h3>
+          <p>Implement machine learning models tailored to your business challenges.</p>
+        </div>
+        <div class="card service-card" tabindex="0" aria-label="Service: Digital Transformation Consulting">
+          <img src="service4-placeholder.png" alt="Consulting Icon">
+          <h3>Consulting</h3>
+          <p>Get expert guidance on digital transformation and AI integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients & Case Studies Section -->
+  <section id="clients" class="clients" role="region" aria-labelledby="clients-heading">
+    <div class="container">
+      <h2 id="clients-heading">Our Clients &amp; Case Studies</h2>
+      <div class="client-cards">
+        <div class="client-card" tabindex="0" aria-label="Client Testimonial">
+          <p>"The insights provided by GPT2AI have revolutionized our operations. Their innovative solutions are truly game-changing."</p>
+          <h4>- Client Name, CEO</h4>
+        </div>
+        <div class="client-card" tabindex="0" aria-label="Client Testimonial">
+          <p>"Their AI solutions transformed our business model, driving efficiency and remarkable growth."</p>
+          <h4>- Client Name, CTO</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section with Detailed Bios -->
+  <section id="team" class="team" role="region" aria-labelledby="team-heading">
+    <div class="container">
+      <h2 id="team-heading">Meet Our Team</h2>
+      <div class="team-cards">
+        <div class="team-card" tabindex="0" aria-label="Team Member: Founder &amp; AI Expert">
+          <img src="team1-placeholder.jpg" alt="Team Member Name">
+          <h3>Team Member Name</h3>
+          <p>Founder &amp; AI Expert</p>
+          <p>[Brief bio placeholder describing expertise, experience, and role in the company]</p>
+        </div>
+        <div class="team-card" tabindex="0" aria-label="Team Member: Data Scientist">
+          <img src="team2-placeholder.jpg" alt="Team Member Name">
+          <h3>Team Member Name</h3>
+          <p>Data Scientist</p>
+          <p>[Brief bio placeholder highlighting data expertise and achievements]</p>
+        </div>
+        <div class="team-card" tabindex="0" aria-label="Team Member: Analytics Consultant">
+          <img src="team3-placeholder.jpg" alt="Team Member Name">
+          <h3>Team Member Name</h3>
+          <p>Analytics Consultant</p>
+          <p>[Brief bio placeholder focusing on consulting and client success stories]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights / Blog Section with Articles -->
+  <section id="insights" class="insights" role="region" aria-labelledby="insights-heading">
+    <div class="container">
+      <h2 id="insights-heading">Insights &amp; Blog</h2>
+      <div class="insight-cards">
+        <article class="insight-card" tabindex="0" aria-labelledby="insight1-heading">
+          <img src="insight1-placeholder.jpg" alt="Blog Post Thumbnail">
+          <h3 id="insight1-heading">How AI is Transforming Industries</h3>
+          <p>A brief overview of the latest trends in AI and how businesses are leveraging them to gain a competitive edge.</p>
+          <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="insight-card" tabindex="0" aria-labelledby="insight2-heading">
+          <img src="insight2-placeholder.jpg" alt="Blog Post Thumbnail">
+          <h3 id="insight2-heading">Data Analytics: Best Practices for Business Growth</h3>
+          <p>Explore top strategies for extracting actionable insights from your data and driving informed decision-making.</p>
+          <a href="#" class="read-more">Read More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section with Modal Contact Form -->
+  <section id="contact" class="contact" role="region" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading">Contact Us</h2>
+      <p>Reach out to us at <a href="mailto:email@company.com">email@company.com</a> or call us at [Phone Number].</p>
+      <button id="contactModalBtn" class="cta-button" aria-haspopup="dialog" aria-controls="contactModal">Get in Touch</button>
+      
+      <!-- Modal Contact Form -->
+      <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+        <div class="modal-content">
+          <button class="close-btn" id="modalCloseBtn" aria-label="Close">&times;</button>
+          <h3 id="modal-heading">Contact Form</h3>
+          <form class="contact-form" action="#" method="post" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-links" role="navigation" aria-label="Social Media">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <!-- Additional social media links as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Navigation Links -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 GPT2AI. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <ul>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#clients" class="nav-link">Clients</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#insights" class="nav-link">Insights</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Preloader, Back-to-Top Button, and Modal Contact Form -->
+  <script>
+    // Hide Preloader After Page Load
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+      setTimeout(() => { preloader.style.display = 'none'; }, 500);
+    });
+
+    // Show Back-to-Top Button on Scroll
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+
+    // Modal Contact Form Functionality
+    const modal = document.getElementById('contactModal');
+    const modalBtn = document.getElementById('contactModalBtn');
+    const closeBtn = document.getElementById('modalCloseBtn');
+
+    modalBtn.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+      if (e.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
