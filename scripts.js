@@ -1,60 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Preloader
-  window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    setTimeout(function() {
-      preloader.style.display = 'none';
-    }, 500);
-  });
+  // Fade-in effect for elements with the .fade-in class
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
 
-  // Intersection Observer for fade-in sections
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver(entries => {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     });
-  }, { threshold: 0.3 });
-  sections.forEach(section => {
-    observer.observe(section);
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    fader.classList.add('hidden');
+    appearOnScroll.observe(fader);
   });
 
-  // Smooth Scrolling for Navigation Links
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 60,
-          behavior: 'smooth'
-        });
-      }
+  // Button press effect for all primary buttons
+  const btns = document.querySelectorAll('.btn-primary');
+  btns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      btn.classList.add('btn-pressed');
+      setTimeout(() => {
+        btn.classList.remove('btn-pressed');
+      }, 200);
     });
   });
-
-  // Testimonial Slider Auto-Scroll
-  const slider = document.querySelector('.testimonial-slider');
-  if (slider) {
-    let scrollAmount = 0;
-    function autoScroll() {
-      scrollAmount += 1;
-      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-        scrollAmount = 0;
-      }
-      slider.scrollLeft = scrollAmount;
-      requestAnimationFrame(autoScroll);
-    }
-    autoScroll();
-  }
 });
-
-// Function to handle the purchase button click
-function purchaseEbook() {
-  // Replace with your actual Stripe product URL
-  window.location.href = "https://buy.stripe.com/test_12345";
-}
