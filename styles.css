@@ -16,143 +16,133 @@ body {
   line-height: 1.6;
 }
 
-/* Header and Navigation */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+/* Header */
+header {
   background-color: #1f1f1f;
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-header .logo img {
-  width: 150px;
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4ac1ff;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
   color: #e0e0e0;
-  font-size: 1rem;
+  padding: 5px 10px;
   transition: color 0.3s;
 }
 
-nav a:hover {
+nav ul li a:hover {
   color: #4ac1ff;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #1a1a1a, #333);
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 40px;
-}
-
-.btn {
-  background-color: #4ac1ff;
-  color: #fff;
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-  background-color: #5bd2ff;
-  transform: translateY(-2px);
-}
-
-/* Sections */
+/* Main Sections */
 section {
-  padding: 60px 20px;
+  padding: 60px 0;
+  border-bottom: 1px solid #333;
 }
 
-section h2 {
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
 }
 
-.feature-item {
-  margin-bottom: 30px;
-}
-
-.feature-item h3 {
-  font-size: 1.75rem;
+h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-/* Table Styling */
+/* Paragraphs and Text */
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #4ac1ff;
+  padding-left: 10px;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #333;
-  padding: 15px;
-  text-align: left;
+  padding: 10px;
+  text-align: center;
 }
 
 table th {
   background-color: #1f1f1f;
 }
 
-/* FAQ Section */
-.faq-item {
-  margin-bottom: 20px;
-  border: 1px solid #333;
+/* Lists */
+ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+/* Preformatted text (for formulas/code) */
+pre {
+  background-color: #1f1f1f;
+  padding: 10px;
   border-radius: 5px;
-  overflow: hidden;
-}
-
-.faq-item details {
-  padding: 15px;
-  cursor: pointer;
-}
-
-.faq-item summary {
-  font-size: 1.25rem;
-  font-weight: 600;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-item details p {
-  margin-top: 10px;
+  overflow-x: auto;
+  font-family: monospace;
+  margin-bottom: 15px;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
   background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
   font-size: 0.9rem;
 }
 
@@ -170,20 +160,18 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  header {
+  header .container {
     flex-direction: column;
   }
-  
   nav ul {
     flex-direction: column;
     gap: 10px;
+    text-align: center;
   }
-  
-  .hero h1 {
-    font-size: 2.5rem;
+  h2 {
+    font-size: 1.8rem;
   }
-  
-  .hero p {
-    font-size: 1.1rem;
+  p {
+    font-size: 0.9rem;
   }
 }
