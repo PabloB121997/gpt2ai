@@ -1,5 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Fade-in effect for elements with the .fade-in class
+document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scroll for navigation links
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 60, // Offset for the sticky header
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Scroll-triggered fade-in effect
   const faders = document.querySelectorAll('.fade-in');
   const appearOptions = {
     threshold: 0.2,
@@ -15,18 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }, appearOptions);
 
   faders.forEach(fader => {
+    // Initially hide elements for the fade-in effect
     fader.classList.add('hidden');
     appearOnScroll.observe(fader);
-  });
-
-  // Button press effect for all primary buttons
-  const btns = document.querySelectorAll('.btn-primary');
-  btns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      btn.classList.add('btn-pressed');
-      setTimeout(() => {
-        btn.classList.remove('btn-pressed');
-      }, 200);
-    });
   });
 });
