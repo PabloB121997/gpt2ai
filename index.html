@@ -3,118 +3,302 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product Showcase Website</title>
-  <!-- Import Product Sans (if available) -->
+  <title>gpt2ai.com – The Ultimate AI Resource</title>
+  <!-- Import the Product Sans font (if available) -->
   <link href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header with logo and navigation -->
   <header>
-    <div class="logo">
-      <img src="icons/logo.png" alt="Brand Logo">
+    <div class="container">
+      <h1 class="logo">gpt2ai.com</h1>
+      <nav>
+        <ul>
+          <li><a href="#ann">ANN</a></li>
+          <li><a href="#llm">LLM</a></li>
+          <li><a href="#gpt">GPT</a></li>
+          <li><a href="#gptstart">Start</a></li>
+          <li><a href="#openai">OpenAI</a></li>
+          <li><a href="#competitors">Competitors</a></li>
+          <li><a href="#customgpt">Custom GPTs</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#databasegpt">DatabaseGPT</a></li>
+          <li><a href="#market">Market</a></li>
+          <li><a href="#pablo">Pablo</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#alliance">Alliance</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-         <li><a href="#home">Home</a></li>
-         <li><a href="#features">Features</a></li>
-         <li><a href="#specifications">Specifications</a></li>
-         <li><a href="#faq">FAQ</a></li>
-         <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero fade-in">
-    <div class="hero-content">
-      <h1>Innovative Technology at Your Fingertips</h1>
-      <p>Discover groundbreaking features designed to elevate your experience.</p>
-      <a href="#features" class="btn">Explore Now</a>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Section: What is ANN? -->
+    <section id="ann" class="fade-in">
+      <div class="container">
+        <h2>What is ANN?</h2>
+        <p>Artificial Neural Networks are computing systems inspired by biological neural networks, fundamental to modern AI.</p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
 
-  <!-- Features Section -->
-  <section id="features" class="fade-in">
-    <h2>Features</h2>
-    <article class="feature-item">
-      <h3>Advanced Performance</h3>
-      <p>Experience unmatched speed and responsiveness with our state-of-the-art technology.</p>
-    </article>
-    <article class="feature-item">
-      <h3>Elegant Design</h3>
-      <p>Modern, minimalist design inspired by sleek aesthetics.</p>
-    </article>
-    <article class="feature-item">
-      <h3>User-Centric Interactivity</h3>
-      <p>Enhanced user interactions with dynamic transitions and smooth animations.</p>
-    </article>
-  </section>
+    <!-- Section: What is LLM? -->
+    <section id="llm" class="fade-in">
+      <div class="container">
+        <h2>What is LLM?</h2>
+        <p>Large Language Models are AI models trained on vast amounts of text data to understand and generate human language.</p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
 
-  <!-- Specifications Section with table -->
-  <section id="specifications" class="fade-in">
-    <h2>Specifications</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Processor</td>
-          <td>Octa-core, 3.1 GHz</td>
-        </tr>
-        <tr>
-          <td>Display</td>
-          <td>6.5-inch OLED, 4K resolution</td>
-        </tr>
-        <tr>
-          <td>Battery</td>
-          <td>4000mAh with fast charging</td>
-        </tr>
-        <tr>
-          <td>Storage</td>
-          <td>128GB, expandable to 512GB</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <!-- Section: What is GPT? -->
+    <section id="gpt" class="fade-in">
+      <div class="container">
+        <h2>What is GPT?</h2>
+        <p>Generative Pre-trained Transformers are a type of LLM, known for their capability to generate coherent and contextually relevant text.</p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
 
-  <!-- FAQ Section using semantic details/summary for accordion effect -->
-  <section id="faq" class="fade-in">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <details>
-        <summary>What is the warranty period?</summary>
-        <p>We offer a 1-year warranty on all products.</p>
-      </details>
-    </div>
-    <div class="faq-item">
-      <details>
-        <summary>Does it support international voltage?</summary>
-        <p>Yes, our product is designed for global compatibility.</p>
-      </details>
-    </div>
-    <div class="faq-item">
-      <details>
-        <summary>Are software updates provided?</summary>
-        <p>Regular updates are available to enhance performance and security.</p>
-      </details>
-    </div>
-  </section>
+    <!-- Section: When did GPT start? -->
+    <section id="gptstart" class="fade-in">
+      <div class="container">
+        <h2>When did GPT start?</h2>
+        <p>
+          GPT (Generative Pre-trained Transformer) is based on the Transformer architecture, which was introduced in the seminal paper 
+          <em>"Attention Is All You Need"</em> by Vaswani et al., published in June 2017. This paper laid the foundation for models like GPT by introducing the self‑attention mechanism that allows models to process and generate text more efficiently.
+        </p>
+        <h3>Self-attention formula:</h3>
+        <pre>
+Attention(Q, K, V) = softmax((QKᵀ) / √dₖ) V
+        </pre>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="fade-in">
-    <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:support@example.com">support@example.com</a></p>
-    <p>Or call us: (123) 456-7890</p>
-  </section>
+    <!-- Section: What is OpenAI? -->
+    <section id="openai" class="fade-in">
+      <div class="container">
+        <h2>What is OpenAI?</h2>
+        <p>
+          OpenAI is an artificial intelligence research lab and company that aims to ensure that artificial general intelligence (AGI) benefits all of humanity.
+          Founded in December 2015 by Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, Wojciech Zaremba, and John Schulman.
+        </p>
+        <h3>GPT versions evolution:</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>GPT-1</th>
+                <th>GPT-2</th>
+                <th>GPT-3</th>
+                <th>GPT-3.5</th>
+                <th>GPT-4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Context Window</td>
+                <td>512 tokens</td>
+                <td>1,024 tokens</td>
+                <td>2,048 tokens</td>
+                <td>4,096 tokens</td>
+                <td>32,768 tokens</td>
+              </tr>
+              <tr>
+                <td>Embedding Dimensions</td>
+                <td>768</td>
+                <td>1,024</td>
+                <td>1,536</td>
+                <td>1,536</td>
+                <td>4,096</td>
+              </tr>
+              <tr>
+                <td>Embedding Vocabulary</td>
+                <td>40,000+</td>
+                <td>50,000</td>
+                <td>50,000+</td>
+                <td>50,000+</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>Neural Network Layers</td>
+                <td>12</td>
+                <td>48</td>
+                <td>96</td>
+                <td>96</td>
+                <td>220</td>
+              </tr>
+              <tr>
+                <td>Parameters</td>
+                <td>117 million</td>
+                <td>1.5 billion</td>
+                <td>175 billion</td>
+                <td>175 billion</td>
+                <td>1 trillion</td>
+              </tr>
+              <tr>
+                <td>Training Data Size</td>
+                <td>5 GB</td>
+                <td>40 GB</td>
+                <td>570 GB</td>
+                <td>570 GB</td>
+                <td>45 terabytes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: OpenAI competitors -->
+    <section id="competitors" class="fade-in">
+      <div class="container">
+        <h2>OpenAI Competitors</h2>
+        <ul>
+          <li><strong>Claude 3</strong> by Anthropic AI focuses on safety and ethical AI alignment.</li>
+          <li><strong>Meta’s LLaMA 3</strong> contributes to open-source AI with scalable models.</li>
+          <li><strong>Microsoft Copilot</strong> integrates AI into Office for productivity.</li>
+          <li><strong>Perplexity AI</strong> enhances search with contextual answers.</li>
+          <li><strong>Grok</strong>, from Elon Musk’s xAI, brings AI to social media.</li>
+          <li><strong>Midjourney and Stable Diffusion</strong> are leaders in AI-generated art.</li>
+          <li><strong>Jasper AI</strong> assists in content creation.</li>
+          <li><strong>GitHub Copilot</strong>, a collaboration between GitHub and OpenAI.</li>
+          <li><strong>Amazon Q</strong> enhances customer interactions in Amazon’s ecosystem.</li>
+        </ul>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: What is Custom GPTs? -->
+    <section id="customgpt" class="fade-in">
+      <div class="container">
+        <h2>What is Custom GPTs?</h2>
+        <p>
+          Custom GPTs are specialized versions of the GPT models tailored for specific tasks or industries by fine-tuning them on domain‑specific data.
+          They are designed to meet the unique needs of businesses, allowing for more accurate and context‑aware interactions such as customer service automation or targeted content generation.
+        </p>
+        <ul>
+          <li>
+            <strong>Instructions:</strong> Refer to the specific guidelines given to shape the GPT’s behavior and responses.
+          </li>
+          <li>
+            <strong>Actions (API):</strong> Integrations that allow the GPT to interact with external systems—retrieving data or executing commands.
+          </li>
+        </ul>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: What is gpt2ai? -->
+    <section id="about" class="fade-in">
+      <div class="container">
+        <h2>What is gpt2ai?</h2>
+        <p>
+          <strong>gpt2ai</strong> is an AI agency focused on helping companies leverage generative AI to optimize business processes.
+          Our goal is to empower businesses by integrating AI technologies that improve efficiency, enhance decision-making, and streamline operations.
+        </p>
+        <p>
+          In addition, we are committed to educating professionals by organizing in‑person courses and conferences on generative AI, its applications, and its profound impact on industry.
+        </p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: What is DatabaseGPT? -->
+    <section id="databasegpt" class="fade-in">
+      <div class="container">
+        <h2>What is DatabaseGPT?</h2>
+        <p>
+          <strong>gpt2ai</strong> is developing <strong>DatabaseGPT</strong>, a platform that integrates SQL databases with ChatGPT via Custom GPT Actions (API).
+        </p>
+        <p>
+          With 80% of the world’s data stored privately in databases, while ChatGPT uses data from the internet, DatabaseGPT uses data from your database.
+          This allows users to query and manage their databases using natural language.
+        </p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: What is DatabaseGPT's market? -->
+    <section id="market" class="fade-in">
+      <div class="container">
+        <h2>What is DatabaseGPT's market?</h2>
+        <p>
+          The market potential for <strong>DatabaseGPT</strong> is enormous. It taps into the multi‑billion dollar enterprise software market focused on database management,
+          with the broader DBMS market projected to exceed $100 billion by 2027.
+        </p>
+        <p>
+          Particularly in the healthcare industry—where large amounts of unstructured data like patient notes, summaries, and treatment plans are generated—DatabaseGPT offers the potential to streamline workflows, enhance patient care, and reduce administrative burdens.
+        </p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: Who is Pablo Barrio? -->
+    <section id="pablo" class="fade-in">
+      <div class="container">
+        <h2>Who is Pablo Barrio?</h2>
+        <p>
+          I am 31 years old and originally from Ourense. For the past seven years, I have been involved in entrepreneurial ventures and worked on big data and AI projects across startups, consulting firms, and enterprises.
+          For the past two years, I served as Head of Data Analytics at Carolina Herrera (STL). This summer, I returned to my studies to fully dedicate myself to my passion: Artificial Intelligence.
+        </p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: Who is our team? -->
+    <section id="team" class="fade-in">
+      <div class="container">
+        <h2>Who is our team?</h2>
+        <p>Our team consists of:</p>
+        <ul>
+          <li>A sales expert with over 10 years of experience across various sectors.</li>
+          <li>A social media manager handling more than 15 Instagram accounts.</li>
+          <li>A software architect responsible for system design and integrations.</li>
+        </ul>
+        <p><strong>NOTE:</strong> We are looking to add a frontend web developer and a backend developer.</p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: Why the alliance between gpt2ai & UDC? -->
+    <section id="alliance" class="fade-in">
+      <div class="container">
+        <h2>Why the alliance between gpt2ai & UDC?</h2>
+        <p>
+          The University of A Coruña (UDC) is investing heavily in artificial intelligence by creating a dedicated degree program and hosting numerous departments focused on generative AI research.
+          This collaboration, combined with the talent of UDC’s students, makes UDC an ideal partner for gpt2ai.
+        </p>
+        <p>
+          gpt2ai believes in fostering innovation through a strong university ecosystem—staying at the forefront of technological advancements while nurturing a collaborative environment.
+        </p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+
+    <!-- Section: Contact / gpt2ai -->
+    <section id="contact" class="fade-in">
+      <div class="container">
+        <h2>gpt2ai</h2>
+        <p><strong>Graciñas</strong></p>
+        <p>Email: <a href="mailto:pablo@gpt2ai.com">pablo@gpt2ai.com</a></p>
+        <p>Date: 03/09/2024</p>
+        <blockquote>gpt2ai</blockquote>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 BrandName. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2024 gpt2ai.com. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="scripts.js"></script>
