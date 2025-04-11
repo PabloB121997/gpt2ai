@@ -4,218 +4,186 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: #0d0d0d;
-  color: #ddd;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-}
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* Fade-in Animation */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Product Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4ac1ff;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
+
+.btn {
+  background-color: #4ac1ff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #5bd2ff;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.feature-item {
+  margin-bottom: 30px;
+}
+
+.feature-item h3 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table th, table td {
+  border: 1px solid #333;
+  padding: 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: #1f1f1f;
+}
+
+/* FAQ Section */
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-item details {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.faq-item summary {
+  font-size: 1.25rem;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item details p {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  font-size: 0.9rem;
+}
+
+/* Fade-In Animation */
 .hidden {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Hero Section */
-#hero {
-  position: relative;
-  text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(135deg, #1a1f2e 0%, #2c3040 100%);
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(13, 13, 13, 0.7);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-#hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-#hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-/* CTA Button */
-.btn-primary {
-  background-color: #4ac1ff;
-  color: #fff;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s, transform 0.3s;
-}
-.btn-primary:hover {
-  background-color: #5bd2ff;
-  transform: translateY(-2px);
-}
-.btn-pressed {
-  transform: scale(0.98);
-}
-
-/* Features Section */
-#features {
-  padding: 4rem 0;
-  background-color: #111;
-}
-#features h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-.features-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-.feature-item {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 8px;
-  flex: 1 1 300px;
-  text-align: center;
-}
-.feature-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
-}
-.feature-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.feature-item p {
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* Mid-Page CTA */
-#mid-cta {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #1a1f2e, #2c3040);
-  text-align: center;
-}
-#mid-cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-#mid-cta p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-/* FAQ Section */
-#faq {
-  padding: 4rem 0;
-  background-color: #111;
-}
-#faq h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-.faq-item details {
-  background: rgba(255,255,255,0.05);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.faq-item details summary {
-  font-weight: 600;
-  font-size: 1.1rem;
-  list-style: none;
-}
-.faq-item details summary::after {
-  content: " +";
-  float: right;
-}
-.faq-item details[open] summary::after {
-  content: " -";
-}
-.faq-item details p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* Testimonials Section */
-#testimonials {
-  padding: 4rem 0;
-  background: #1a1a1a;
-  text-align: center;
-}
-#testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-.testimonial-item {
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-}
-.testimonial-quote {
-  font-style: italic;
-  font-size: 1.25rem;
-  color: #eee;
-  margin-bottom: 1rem;
-}
-.testimonial-author {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Final CTA Section */
-#final-cta {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #1a1f2e, #2c3040);
-  text-align: center;
-}
-#final-cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-#final-cta p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-/* Footer */
-footer {
-  padding: 2rem 0;
-  background-color: #0d0d0d;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  #hero h1 { font-size: 2.5rem; }
-  #hero p { font-size: 1.1rem; }
-  .features-container { flex-direction: column; align-items: center; }
+  header {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
 }
