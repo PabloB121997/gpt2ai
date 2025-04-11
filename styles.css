@@ -41,7 +41,7 @@ header .container {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #4ac1ff;
+  color: #ffffff;
 }
 
 nav ul {
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #4ac1ff;
+  color: #ffffff;
 }
 
 /* Main Sections */
@@ -92,7 +92,7 @@ p {
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid #4ac1ff;
+  border-left: 4px solid #ffffff;
   padding-left: 10px;
   color: #aaa;
   font-style: italic;
