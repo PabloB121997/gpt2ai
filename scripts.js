@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scroll for navigation links
+  // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetID = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetID);
       if (targetSection) {
         window.scrollTo({
-          top: targetSection.offsetTop - 60, // Offset for the sticky header
+          top: targetSection.offsetTop - 60, // account for sticky header height
           behavior: 'smooth'
         });
       }
     });
   });
 
-  // Scroll-triggered fade-in effect
+  // Fade-in effect for sections using Intersection Observer
   const faders = document.querySelectorAll('.fade-in');
   const appearOptions = {
-    threshold: 0.2,
+    threshold: 0.3,
     rootMargin: "0px 0px -50px 0px"
   };
 
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, appearOptions);
 
   faders.forEach(fader => {
-    // Initially hide elements for the fade-in effect
     fader.classList.add('hidden');
     appearOnScroll.observe(fader);
   });
